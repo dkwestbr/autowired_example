@@ -8,7 +8,7 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 
 @Configuration
-@ComponentScan(basePackages = {"dkwestbr.spring.fun.stringGetter.**"})
+@ComponentScan(basePackages = {"dkwestbr.spring.autowired.example.**"})
 public class AppConfig {
 
     @Bean
