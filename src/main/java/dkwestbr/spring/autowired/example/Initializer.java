@@ -1,11 +1,8 @@
 package dkwestbr.spring.autowired.example;
 
-import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.servlet.DispatcherType;
-import javax.servlet.FilterRegistration;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRegistration;
@@ -14,7 +11,6 @@ import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.ContextLoaderListener;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 
-import com.sun.jersey.spi.container.servlet.ServletContainer;
 import com.sun.jersey.spi.spring.container.servlet.SpringServlet;
 
 import dkwestbr.spring.autowired.example.config.AppConfig;
@@ -42,6 +38,7 @@ public class Initializer implements WebApplicationInitializer {
         servletDispatcher.setInitParameters(filterParameters);
         servletDispatcher.setLoadOnStartup(1);
         servletDispatcher.addMapping("/*");
+        
         
         /*
         // register filter
