@@ -10,7 +10,6 @@
 <properties>
 		<bug.product>RMX Data Repository</bug.product>
 		<bug.component>General</bug.component>
-		<mailingList.name>rmx-dr-dev@yahoo-inc.com</mailingList.name>
 		<spring-version>3.2.4.RELEASE</spring-version>
 		<version.log4j2>2.0-beta9</version.log4j2>
 		<version.slf4j>1.7.5</version.slf4j>
@@ -18,13 +17,6 @@
 	</properties>
 
 	<dependencies>
-	
-		<dependency>
-			<groupId>yahoo.yinst.jports_ojdbc6</groupId>
-			<artifactId>ojdbc6</artifactId>
-			<version>11.2.0.1.0_1</version>
-			<scope>runtime</scope>
-		</dependency>
 	
 		<dependency>
 			<groupId>junit</groupId>
@@ -94,26 +86,9 @@
 			</exclusions>
 		</dependency>
 		<dependency>
-			<groupId>yahoo.yinst.yjava_ws_util</groupId>
-			<artifactId>yjava_ws_util</artifactId>
-			<version>6.2.105</version>
-			<exclusions>
-				<exclusion>
-					<groupId>org.codehaus.jackson</groupId>
-					<artifactId>jackson-jaxrs</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
 			<version>3.0.1</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>yahoo.yinst.yjava_filter_logic</groupId>
-			<artifactId>yjava_filter_logic</artifactId>
-			<version>0.13.72</version>
 			<scope>provided</scope>
 		</dependency>
 
@@ -257,20 +232,6 @@
 				<version>2.16</version>
 				<configuration>
 					<argLine>-Dspring.profiles.active=${profiles.active}</argLine>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>yahoo.yinst.maven_plugins</groupId>
-				<artifactId>yjava_maven_plugins_yinst</artifactId>
-				<configuration>
-					<skip>true</skip>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>yahoo.yinst.maven_plugins</groupId>
-				<artifactId>yjava_maven_plugins_buildyblocks</artifactId>
-				<configuration>
-					<skip>true</skip>
 				</configuration>
 			</plugin>
 			<plugin>
