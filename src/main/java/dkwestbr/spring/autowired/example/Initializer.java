@@ -24,6 +24,11 @@ public class Initializer implements WebApplicationInitializer {
 		
 		context.addListener(new ContextLoaderListener(appContext));
 		
+		/*
+		for(String profile: appContext.getEnvironment().getActiveProfiles()) {
+			System.out.println(String.format("Active profile: %s", profile));
+		}
+		*/
 		
         Map<String, String> filterParameters = new HashMap<>();
 
@@ -38,14 +43,6 @@ public class Initializer implements WebApplicationInitializer {
         servletDispatcher.setInitParameters(filterParameters);
         servletDispatcher.setLoadOnStartup(1);
         servletDispatcher.addMapping("/*");
-        
-        
-        /*
-        // register filter
-        FilterRegistration.Dynamic filterDispatcher = context.addFilter("webFilter", new ServletContainer());
-        filterDispatcher.setInitParameters(filterParameters);
-        filterDispatcher.addMappingForUrlPatterns(EnumSet.allOf(DispatcherType.class), false, "/*");
-	    */
 	}
 
 }
