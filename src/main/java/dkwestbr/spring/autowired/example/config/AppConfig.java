@@ -15,13 +15,13 @@ public class AppConfig {
     private static PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer() {
         return new PropertySourcesPlaceholderConfigurer();
     }
-
-    @Configuration
-    @PropertySource("classpath:configuration.properties")
-    static class Production { }
     
     @Configuration
     @Profile("test")
     @PropertySource("classpath:configuration.properties")
     static class Test { }
+    
+    @Configuration
+    @PropertySource("classpath:configuration.properties")
+    static class Production { }
 }

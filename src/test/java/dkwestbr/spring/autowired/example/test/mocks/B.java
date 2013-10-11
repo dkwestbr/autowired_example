@@ -1,9 +1,8 @@
-package dkwestbr.spring.autowired.example.stringGetter.impl;
+package dkwestbr.spring.autowired.example.test.mocks;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
-import org.springframework.test.context.ActiveProfiles;
 
 import dkwestbr.spring.autowired.example.IStringGetter;
 
