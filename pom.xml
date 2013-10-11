@@ -14,6 +14,7 @@
 		<version.log4j2>2.0-beta9</version.log4j2>
 		<version.slf4j>1.7.5</version.slf4j>
 		<profiles.active>test</profiles.active>
+		<test.containerFactory>com.sun.jersey.test.framework.spi.container.grizzly.web.GrizzlyWebTestContainerFactory</test.containerFactory>
 	</properties>
 
 	<dependencies>
@@ -231,7 +232,7 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.16</version>
 				<configuration>
-					<argLine>-Dspring.profiles.active=${profiles.active}</argLine>
+					<argLine>-Dspring.profiles.active=${profiles.active} -Dtest.containerFactory=${test.containerFactory}</argLine>
 				</configuration>
 			</plugin>
 			<plugin>

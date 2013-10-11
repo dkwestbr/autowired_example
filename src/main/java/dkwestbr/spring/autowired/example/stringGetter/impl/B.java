@@ -1,13 +1,14 @@
 package dkwestbr.spring.autowired.example.stringGetter.impl;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 import org.springframework.test.context.ActiveProfiles;
 
 import dkwestbr.spring.autowired.example.IStringGetter;
 
 @Component
-@ActiveProfiles("test")
+@Profile("test")
 public class B implements IStringGetter {
 
 	@Value("${my.property}")
